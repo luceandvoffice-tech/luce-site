@@ -3,22 +3,20 @@ import streamlit as st
 # 1. ページの設定
 st.set_page_config(page_title="Luce and v", page_icon="🌿", layout="centered")
 
-# ★右下の赤いバー、右上のメニュー、Forkボタンなどを完全に隠す設定
-hide_style = """
+# ★エラーを完全に回避しつつ、右下の赤いバーを非表示にする設定
+st.html("""
     <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
     .viewerBadge_container__1QSob {display: none !important;}
-    input[class^="st-"] { pointer-events: none; }
     div[data-testid="stStatusWidget"] {visibility: hidden;}
     .stAppDeployButton {display:none;}
     </style>
-"""
-st.markdown(hide_style, unsafe_markdown=True)
+""")
 
 
-# 2. メインの挨拶（移動中に練り上げた素晴らしい文章です！）
+# 2. メインの挨拶
 st.title("🌿 Luce and v（ルーチェ アンド ブイ）")
 
 st.markdown("""
@@ -69,5 +67,5 @@ st.divider()
 st.header("📩 お問い合わせ")
 st.write("ご相談や、「こういう身の回りの業務、自動化できる？」という小さなお悩みなど、気軽にお声がけください。")
 
-# ★重要：下の "your-email@example.com" を、代表の本番用メールアドレスに書き換えてください！
-st.link_button("メールで相談してみる", "luce.and.v.office@gmail.com")
+# ★メールアドレスも本番用に変更済みです！
+st.link_button("メールで相談してみる", "mailto:luce.and.v.office@gmail.com")
