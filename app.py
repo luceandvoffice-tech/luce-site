@@ -4,11 +4,11 @@ import streamlit as st
 st.set_page_config(page_title="Luce and v", page_icon="🌿", layout="centered")
 
 # メインの挨拶
-st.title("🌿 Luce and v（ルーチェ アンド ブイ）")
+st.title("Luce and v（ルーチェ アンド ブイ）")
 
 st.markdown("""
 経営に悩む社長さんのお話や、日々の実務を支える社員の皆さんのお話を聞いてきました。
-そこで強く実感したのは、**「IT化がもたらす素晴らしい効率化」**と、同時に**「Face to Face（対面）で交わす温かいコミュニケーションの大切さ」**です。
+そこで強く実感したのは、「IT化がもたらす素晴らしい効率化」と、同時に「Face to Face（対面）で交わす温かいコミュニケーションの大切さ」です。
 
 いくら大掛かりなシステムを導入したところで、導入した意図の共有や社員さんの意識次第で使い方が使い方が違ったり、なかなか上手くいかないことがあります。
 
@@ -21,7 +21,7 @@ st.divider()
 
 
 # 3. 提供サービス
-st.header("🛠️ 提供サービス")
+st.header(" 提供サービス")
 st.markdown("""
 **PythonやGoogle GAS（Google Apps Script）を使った、身近な小さな自動化をお手伝いします。**
 
@@ -38,7 +38,7 @@ st.divider()
 
 
 # 4. 事業者概要
-st.header("📋 事業者概要")
+st.header(" 事業者概要")
 st.markdown("""
 * **屋号（事業者名）：** Luce and v（ルーチェ アンド ブイ）
 * **代表者：** 代表 Midori
