@@ -1,53 +1,16 @@
 import streamlit as st
 
-# 1. ページの設定
+# 1. ページの設定（最もシンプルでエラーが絶対に起きない基本形）
 st.set_page_config(page_title="Luce and v", page_icon="🌿", layout="centered")
 
-# ★【超・最終兵器】JavaScriptを使って、スマホでもプライベートモードでも赤いバーを100%消し去る
-st.components.v1.html("""
-    <script>
-    function removeManageApp() {
-        // 親画面（Streamlitの全体）から対象のボタンやバッジを探し出して完全に消去
-        const targetSelectors = [
-            '[data-testid="manage-app-button"]',
-            'button[title*="Manage app"]',
-            'div[class*="viewerBadge"]',
-            '.stAppDeployButton'
-        ];
-        
-        targetSelectors.forEach(selector => {
-            // 通常の領域から削除
-            const elements = window.parent.document.querySelectorAll(selector);
-            elements.forEach(el => el.remove());
-        });
-        
-        // メニューやフッター、ヘッダーも強制非表示
-        const styles = `
-            #MainMenu {visibility: hidden !important; display: none !important;}
-            footer {visibility: hidden !important; display: none !important;}
-            header {visibility: hidden !important; display: none !important;}
-            div[data-testid="stStatusWidget"] {visibility: hidden !important; display: none !important;}
-        `;
-        const styleSheet = window.parent.document.createElement("style");
-        styleSheet.innerText = styles;
-        window.parent.document.head.appendChild(styleSheet);
-    }
-    
-    // 画面が読み込まれた瞬間と、その後も繰り返し実行して完全に消し去る
-    removeManageApp();
-    setInterval(removeManageApp, 500);
-    </script>
-""", height=0, width=0)
-
-
-# 2. メインの挨拶
+# メインの挨拶
 st.title("🌿 Luce and v（ルーチェ アンド ブイ）")
 
 st.markdown("""
 経営に悩む社長さんのお話や、日々の実務を支える社員の皆さんのお話を聞いてきました。
 そこで強く実感したのは、**「IT化がもたらす素晴らしい効率化」**と、同時に**「Face to Face（対面）で交わす温かいコミュニケーションの大切さ」**です。
 
-いくら大掛かりなシステムを導入したところで、導入した意図の共有や社員さんの意識次第で使い方が違ったり、なかなか上手くいかないことがあります。
+いくら大掛かりなシステムを導入したところで、導入した意図の共有や社員さんの意識次第で使い方が使い方が違ったり、なかなか上手くいかないことがあります。
 
 **「現場の温かみを残したまま、身の回りの『めんどくさい』をスマートに解決することはできないか？」**
 
@@ -91,5 +54,5 @@ st.divider()
 st.header("📩 お問い合わせ")
 st.write("ご相談や、「こういう身の回りの業務、自動化できる？」という小さなお悩みなど、気軽にお声がけください。")
 
-# ★メールアドレスもバッチリ入っています
+# メールリンク
 st.link_button("メールで相談してみる", "mailto:luce.and.v.office@gmail.com")
